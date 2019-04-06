@@ -1,10 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body {
-    background: url(/images/bg.jpg) no-repeat;
+    /* background: url(/images/bg.jpg) no-repeat; */
+    
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+27,207cca+38,207cca+38,207cca+44,2989d8+50,7db9e8+62 */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 27%, #207cca 38%, #207cca 38%, #207cca 44%, #2989d8 50%, #7db9e8 62%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 27%,#207cca 38%,#207cca 38%,#207cca 44%,#2989d8 50%,#7db9e8 62%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #1e5799 0%,#2989d8 27%,#207cca 38%,#207cca 38%,#207cca 44%,#2989d8 50%,#7db9e8 62%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     background-size: cover;
     font-family: Montserrat;
     color: white;
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-areas: 
+                "nav nav"
+                "main main"
+                "footer footer"
+      
+
 }
 
 nav {
@@ -12,6 +28,23 @@ nav {
     position: fixed;
     background-color: none;
     margin: 0px;
+    opacity: 0.8;
+}
+
+.logo {
+    display: grid;
+    position: fixed;
+
+    margin: 0px;
+    right: 20px;
+    height: 40px;
+    width: 250px;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
 }
 
 ul {
@@ -27,7 +60,7 @@ ul li {
     opacity: .8;
     text-align: center;
     line-height: 40px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
     margin-right: 10px;
 }
@@ -40,7 +73,7 @@ ul li a {
 
 
 ul li a:hover {
-    background-color: green;
+    background-color: white;
     color: black;
 }
 
@@ -55,9 +88,39 @@ ul li:hover ul li {
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 130px;
     opacity: 0.8;
     background-color: black;
     position: absolute;
     bottom: 0;
+    line-height: 30px;
+    text-align: center;
+    
+}
+
+.column {
+    float: left;
+    width: 33.33%
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ol {
+    list-style: none;
+}
+
+main {
+    position: absolute;
+    margin: 50px;
+    width: 50%;
+    opacity: 0.8;
+    font-size: 25px;
+    top: 20%;
+    color: black;
+    font-weight: 500
 }
